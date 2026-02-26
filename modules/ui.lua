@@ -60,24 +60,6 @@ function desenhar_numeros_vida()
             pos_x_triangulo, pos_y_triangulo, LARANJA_CLARO)
     end
     
-    -- Vida do quadrado
-    if VIDA_QUADRADO > 0 and pos_quadrado[1] > 0 then
-        local celula_quadrado = GRID_CELULAS[pos_quadrado[1]][pos_quadrado[2]]
-        local texto_vida_quadrado = tostring(VIDA_QUADRADO)
-        local largura_texto_quadrado = fonte_para_usar:getWidth(texto_vida_quadrado)
-        local pos_x_quadrado = celula_quadrado.centro_x - largura_texto_quadrado / 2
-        
-        local pos_y_quadrado
-        if pos_quadrado[1] == 3 then
-            pos_y_quadrado = celula_quadrado.y - 45
-        else
-            pos_y_quadrado = celula_quadrado.y + celula_quadrado.height + 30
-        end
-        
-        desenhar_texto_com_borda(fonte_para_usar, texto_vida_quadrado, 
-            pos_x_quadrado, pos_y_quadrado, AMARELO)
-    end
-    
     --Vida da bola inimiga
     if VIDA_BOLA_INIMIGA > 0 and pos_bola_inimiga[1] > 0 then
         local celula_bola_inimiga = GRID_CELULAS[pos_bola_inimiga[1]][pos_bola_inimiga[2]]

@@ -1,6 +1,9 @@
 -- modules/grid.lua
 -- Funções relacionadas ao grid
 
+-- Referências a variáveis globais de outros módulos
+colunas_cedidas = colunas_cedidas or {}  -- Garante que existe mesmo se não definido
+
 function criar_grid()
     for linha = 1, NUM_LINHAS do
         local linha_celulas = {}
@@ -56,12 +59,14 @@ function desenhar_grid()
         for coluna = 1, NUM_COLUNAS do
             local celula = GRID_CELULAS[linha][coluna]
             
-            -- Verifica se é coluna cedida pela carta 9
+            -- Verifica se é coluna cedida pela carta 9 (agora usando a variável global)
             local eh_coluna_cedida = false
-            for _, coluna_cedida in ipairs(colunas_cedidas) do
-                if coluna == coluna_cedida.coluna then
-                    eh_coluna_cedida = true
-                    break
+            if colunas_cedidas then  -- Verifica se a variável existe
+                for _, coluna_cedida in ipairs(colunas_cedidas) do
+                    if coluna == coluna_cedida.coluna then
+                        eh_coluna_cedida = true
+                        break
+                    end
                 end
             end
             

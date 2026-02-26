@@ -28,7 +28,7 @@ function mudar_fase(nova_fase)
         tempo_fase_preparacao = 0
         barra_customizacao = 0
         
-        -- Chama a função do módulo cards
+        -- Chama a função do módulo cards para preparar a mão com 6 cartas do deck
         if entrar_fase_preparacao then
             entrar_fase_preparacao()
         else
@@ -41,11 +41,16 @@ function mudar_fase(nova_fase)
             MOSTRAR_PREPARADO = true
             tempo_preparado = 0
             
-            -- Chama a função do módulo cards
+            -- Chama a função do módulo cards para salvar cartas não selecionadas
             if sair_fase_preparacao then
                 sair_fase_preparacao()
             else
                 print("ERRO: função sair_fase_preparacao não encontrada!")
+            end
+            
+            -- Se estiver na fase 4, escolher novos ataques para a esfera
+            if fase_atual_jogo == FASE_4 and escolher_ataques_para_fase4 then
+                escolher_ataques_para_fase4()
             end
         end
     end
@@ -54,7 +59,7 @@ end
 function atualizar_fase(dt)
     if fase_atual == FASE_ACAO and not JOGO_PAUSADO then
         -- Atualiza mensagem "Preparado?" (bloqueia ações enquanto mostra)
-        if MOSTRAR_PREPARado then
+        if MOSTRAR_PREPARADO then
             tempo_preparado = tempo_preparado + dt
             if tempo_preparado >= DURACAO_PREPARADO then
                 MOSTRAR_PREPARADO = false

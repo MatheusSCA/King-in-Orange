@@ -12,14 +12,14 @@ max_linhas_selecionadas = 1  -- Cartas selecionadas estão em 1 linha
 function obter_descricao_carta(id_carta)
     local descricoes = {
         ["A"] = "Copia próxima carta",
-        ["2"] = "Tiro grande na linha",
-        ["3"] = "Ataque em coluna",
+        ["2"] = "Ataque a Coluna a 2 casa",
+        ["3"] = "Tiro em linha",
         ["4"] = "Imunidade por 5s",
         ["5"] = "Cura 50% da vida",
-        ["6"] = "Conquista coluna inimiga",
-        ["7"] = "Efeito aleatório (1-7)",
-        ["8"] = "Armadilha em grade",
-        ["9"] = "Cede coluna + dobra dano por 2 fases",
+        ["6"] = "Empure Inimigos na sua frente",
+        ["7"] = "Tente sua Sorte",
+        ["8"] = "2 projeteis que empurram inimigos",
+        ["9"] = "Puxe Inimigos para frente",
         ["10"] = "Dano baseado em cartas usadas"
     }
     return descricoes[id_carta] or "Efeito especial"
@@ -321,7 +321,7 @@ function desenhar_instrucoes_preparacao()
         "Z: Selecionar carta para uso",
         "X: Cancelar última carta selecionada",
         "C: Voltar à fase de ação",
-        "ESPAÇO: Resetar baralho"
+        "ESPAÇO: Resetar baralho e voltar à ação"
     }
     
     -- Posição no lado direito da tela
@@ -486,12 +486,13 @@ function verificar_clique_preparacao(x, y)
 end
 
 function resetar_cartas()
-    print("Resetando cartas - Limpando tudo para próxima fase...")
+    print("=== RESETANDO CARTAS VIA FASE DE PREPARAÇÃO ===")
     
-    -- Chama a função que limpa TODAS as cartas (selecionadas, não selecionadas e mão)
-    -- e prepara um novo conjunto de 6 cartas para a fase de preparação atual
+    -- Chama a função que limpa TODAS as cartas e as devolve ao deck
     resetar_cartas_para_preparacao()
     
-    print("Cartas resetadas completamente!")
-    print("Agora você tem " .. #mao_atual .. " cartas novas na mão.")
+    -- Após resetar o baralho, VOLTA PARA A FASE DE AÇÃO
+    -- Na próxima vez que entrar na preparação, virá um baralho novo
+    print("Voltando para fase de ação com baralho resetado...")
+    mudar_fase(FASE_ACAO)
 end
