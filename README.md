@@ -1,13 +1,22 @@
-GDD - King in Yellow 
-
+#King in Yellow# 
 Jogo feito em Lua e rodando no Love2D 
-RPG de Ação com combate tático em tempo real, usando Mecânicas de Deckbuilder e de Roguelike
 
-Gameplay 
-Jogue partidas em grades de 3x3, trocando entre fases de preparação, onde escolhe cartas para usar, e fase de ação onde ataca, desvia e use cartas para derrotar inimigos. Derrote inimigos, ganhe cartas especiais para derrotar bosses mais difícies 
+King in Orange é um jogo RPG de estratégia em turnos com combate em tempo real, onde o jogador controla uma esfera roxa em um grid 3x6, enfrentando diferentes inimigos em 4 fases distintas. O jogo combina elementos de card game e bullet hell em um estilo visual retrô com cores vibrantes.
 
-Especificações da versão 
-UI e Movimentos funcionando, Cartas e trocas de fases funcionando mas faltando Ia de inimigos.
+**Mecânicas Principais - Sistema de Fases**
 
-Objetivos Futuros 
-Rebalancear Inimigos,cartas e adicionar sequencias de fase e recompesas para apos passar por fase.
+**Mecânicas Principais - Sistema de Fases**
+O jogo possui 4 fases marcadas pelo seus inimigos:
+
+Fase 1: Esfera - Inimigo básico que persegue e atira, ensinando o jogador sobre mecânicas do jogo.
+Fase 2: Inimigo sorteado aleatoriamente (Quadrado OU Triângulo)
+Fase 3: Inimigo não selecionado na fase 2
+Fase 4: Esfera Final - Versão mais poderosa com novos padrões de ataque
+
+**Mecânicas Principais - Sistema de Cartas**
+
+Deck inicial: 10 tipos de cartas com cópias variadas
+Custo: Cada carta tem custo de 1 a 5, máximo de 5 por rodada
+Mão: 6 cartas são sorteadas a cada fase de preparação
+Seleção: Até 5 cartas podem ser selecionadas para usar na fase de ação
+Cartas não usadas: Retornam à mão na próxima fase de preparação
