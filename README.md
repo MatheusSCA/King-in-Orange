@@ -29,18 +29,16 @@ Mão: 6 cartas são sorteadas a cada fase de preparação<br>
 Seleção: Até 5 cartas podem ser selecionadas para usar na fase de ação<br>
 Cartas não usadas: Retornam à mão na próxima fase de preparação</p>
 
-<p>Controles<br>
-Tecla	      ---------Função<br>
-WASD / Setas---------	Movimentar<br>
-Z          	--------- Atirar/Confirmar carta<br>
-X	          ---------Usar próxima carta/Cancelar última carta selecionada<br>
-C	          ---------Trocar de Ciclo<br>
-ESPAÇO	    ---------Resetar baralho (na preparação)<br>
-ESC         ---------	Pausar / Voltar ao menu</p>
+<p><strong>Controles</strong><br>
+<code>WASD / Setas</code>  ---------  Movimentar<br>
+<code>Z</code>            ---------  Atirar/Confirmar carta<br>
+<code>X</code>            ---------  Usar próxima carta/Cancelar última carta selecionada<br>
+<code>C</code>            ---------  Trocar de Ciclo<br>
+<code>ESPAÇO</code>       ---------  Resetar baralho (na preparação)<br>
+<code>ESC</code>          ---------  Pausar / Voltar ao menu</p>
 
-<p>Controles para Debug<br>
-Tecla	      ---------Função<br>
-Y           ---------Pular fase</p>
+<p><strong>Controles para Debug</strong><br>
+<code>Y</code>            ---------  Pular fase</p>
 
 <p><strong>Inimigos</strong><br>
 -&gt;Esfera Codinome: J(Fases 1 e 4)<br>
@@ -79,18 +77,18 @@ Vida: 500</p>
 -Dispara projétil que empurra jogador para coluna 1</p>
 
 <p><strong>Cartas</strong></p>
-
-<p>ID	Custo	Cópias	Efeito<br>
-A	   0		 1	 	 	Copia a próxima carta da fila<br>
-2		 1		 3	 	 	Ataque em coluna (2 casas à frente)<br>
-3		 1		 3	 	 	Tiro especial que percorre a linha<br>
-4		 2		 2	 	 	Imunidade por 5 segundos<br>
-5		 3		 1	 	 	Cura 50% da vida máxima<br>
-6		 2		 2	 	 	Empurra inimigos das colunas 4-5 para direita<br>
-7		 1		 1	 	 	Efeito aleatório (1-7) - 7 completa barra<br>
-8		 1		 1	 	 	Projéteis que puxam inimigos para sua linha<br>
-9		 2		 1	 	 	Puxa inimigos das colunas 5-6 para esquerda<br>
-10	 5		 1	 	 	Causa mais conforme o número de cartas únicas usadas</p>
+<p>
+<code>A </code>  Custo 0  -  Cópias 1  -  Copia a próxima carta da fila<br>
+<code>2 </code>  Custo 1  -  Cópias 3  -  Ataque em coluna (2 casas à frente)<br>
+<code>3 </code>  Custo 1  -  Cópias 3  -  Tiro especial que percorre a linha<br>
+<code>4 </code>  Custo 2  -  Cópias 2  -  Imunidade por 5 segundos<br>
+<code>5 </code>  Custo 3  -  Cópias 1  -  Cura 50% da vida máxima<br>
+<code>6 </code>  Custo 2  -  Cópias 2  -  Empurra inimigos das colunas 4-5 para direita<br>
+<code>7 </code>  Custo 1  -  Cópias 1  -  Efeito aleatório (1-7) - 7 completa barra<br>
+<code>8 </code>  Custo 1  -  Cópias 1  -  Projéteis que puxam inimigos para sua linha<br>
+<code>9 </code>  Custo 2  -  Cópias 1  -  Puxa inimigos das colunas 5-6 para esquerda<br>
+<code>10</code>  Custo 5  -  Cópias 1  -  Causa mais conforme o número de cartas únicas usadas
+</p>
 
 <p><strong>HUD Principal</strong></p>
 
