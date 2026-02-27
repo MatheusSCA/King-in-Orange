@@ -1,116 +1,118 @@
-<font size="7" color="#800080">KING IN YELLOW</font>
+<h1>
+  <font size="7" color="#800080">KING IN ORANGE</font>
+</h1>
 
-Jogo feito em Lua e rodando no Love2D 
+<p>Jogo feito em Lua e rodando no Love2D</p>
 
-King in Orange é um jogo RPG de estratégia em turnos com combate em tempo real, onde o jogador controla uma esfera roxa em um grid 3x3, enfrentando diferentes inimigos em outro grid 3x3 por 4 fases distintas. O jogo combina elementos de card game e bullet hell em um estilo visual retrô com cores vibrantes.
+<p>King in Orange é um jogo RPG de estratégia em turnos com combate em tempo real, onde o jogador controla uma esfera roxa em um grid 3x3, enfrentando diferentes inimigos em outro grid 3x3 por 4 fases distintas. O jogo combina elementos de card game e bullet hell em um estilo visual retrô com cores vibrantes.</p>
 
-**Mecânicas Principais - Ciclo do Jogo**
-O jogo alterna entre dois estados: **de preparação** e **de ação**
+<p><strong>Mecânicas Principais - Ciclo do Jogo</strong><br>
+O jogo alterna entre dois estados: <strong>de preparação</strong> e <strong>de ação</strong></p>
 
-Ciclo de Preparação: Fase de estratégia, onde o jogador escolhe entre 6 cartas selecionadas de 18 cartas( 10 cartas únicas) de custo de 1 a 5, maxímo de 5 de custo para ser usados no proxímo ciclo, onde as não usadas e não puxadas ainda são salvas para próximo ciclo de preparação. 
+<p>Ciclo de Preparação: Fase de estratégia, onde o jogador escolhe entre 6 cartas selecionadas de 18 cartas( 10 cartas únicas) de custo de 1 a 5, maxímo de 5 de custo para ser usados no proxímo ciclo, onde as não usadas e não puxadas ainda são salvas para próximo ciclo de preparação.</p>
 
-Ciclo de Ação: Fase de combate em tempo real,onde o jogador se movimenta pelo seu grid de 3x3, utilizando tiros padrão e as cartas selecionadas para derrotar inimigos e não ser derrotado, até o proxímo ciclo de preparação, selecionado após passar tempo determinado, marcado pela barra que enche no topo da tela.
+<p>Ciclo de Ação: Fase de combate em tempo real,onde o jogador se movimenta pelo seu grid de 3x3, utilizando tiros padrão e as cartas selecionadas para derrotar inimigos e não ser derrotado, até o proxímo ciclo de preparação, selecionado após passar tempo determinado, marcado pela barra que enche no topo da tela.</p>
 
-**Mecânicas Principais - Sistema de Fases**
-O jogo possui 4 fases marcadas pelo seus inimigos:
+<p><strong>Mecânicas Principais - Sistema de Fases</strong><br>
+O jogo possui 4 fases marcadas pelo seus inimigos:</p>
 
-Fase 1: Esfera - Inimigo básico que persegue e atira, ensinando o jogador sobre mecânicas do jogo.
-Fase 2: Inimigo sorteado aleatoriamente (Quadrado OU Triângulo)
-Fase 3: Inimigo não selecionado na fase 2
-Fase 4: Esfera Final - Versão mais poderosa com novos padrões de ataque
+<p>Fase 1: Esfera - Inimigo básico que persegue e atira, ensinando o jogador sobre mecânicas do jogo.<br>
+Fase 2: Inimigo sorteado aleatoriamente (Quadrado OU Triângulo)<br>
+Fase 3: Inimigo não selecionado na fase 2<br>
+Fase 4: Esfera Final - Versão mais poderosa com novos padrões de ataque</p>
 
-**Mecânicas Principais - Sistema de Cartas**
+<p><strong>Mecânicas Principais - Sistema de Cartas</strong></p>
 
-Deck inicial: 10 tipos de cartas com cópias variadas
-Custo: Cada carta tem custo de 1 a 5, máximo de 5 por rodada
-Mão: 6 cartas são sorteadas a cada fase de preparação
-Seleção: Até 5 cartas podem ser selecionadas para usar na fase de ação
-Cartas não usadas: Retornam à mão na próxima fase de preparação
+<p>Deck inicial: 10 tipos de cartas com cópias variadas<br>
+Custo: Cada carta tem custo de 1 a 5, máximo de 5 por rodada<br>
+Mão: 6 cartas são sorteadas a cada fase de preparação<br>
+Seleção: Até 5 cartas podem ser selecionadas para usar na fase de ação<br>
+Cartas não usadas: Retornam à mão na próxima fase de preparação</p>
 
-Controles
-Tecla	      ---------Função
-WASD / Setas---------	Movimentar 
-Z          	--------- Atirar/Confirmar carta
-X	          ---------Usar próxima carta/Cancelar última carta selecionada
-C	          ---------Trocar de Ciclo
-ESPAÇO	    ---------Resetar baralho (na preparação)
-ESC         ---------	Pausar / Voltar ao menu
+<p>Controles<br>
+Tecla	      ---------Função<br>
+WASD / Setas---------	Movimentar<br>
+Z          	--------- Atirar/Confirmar carta<br>
+X	          ---------Usar próxima carta/Cancelar última carta selecionada<br>
+C	          ---------Trocar de Ciclo<br>
+ESPAÇO	    ---------Resetar baralho (na preparação)<br>
+ESC         ---------	Pausar / Voltar ao menu</p>
 
-Controles para Debug
-Tecla	      ---------Função
-Y           ---------Pular fase
+<p>Controles para Debug<br>
+Tecla	      ---------Função<br>
+Y           ---------Pular fase</p>
 
-**Inimigos**
-->Esfera Codinome: J(Fases 1 e 4)
-Vida Fase 1: 600
-Vida Fase 4: 1200
+<p><strong>Inimigos</strong><br>
+-&gt;Esfera Codinome: J(Fases 1 e 4)<br>
+Vida Fase 1: 600<br>
+Vida Fase 4: 1200</p>
 
-Comportamento: 
-Persegue o jogador.
+<p>Comportamento:<br>
+Persegue o jogador.</p>
 
-Ataques Fase 1:
--Projéteis quando na mesma linha.
--Ataque em coluna quando jogador na coluna 1.
+<p>Ataques Fase 1:<br>
+-Projéteis quando na mesma linha.<br>
+-Ataque em coluna quando jogador na coluna 1.</p>
 
-Ataques Fase 4:
--Padrão 1: Ataques em colunas (1-2 ou 2-3) que empurram jogador.
--Padrão 2: Projéteis em linhas + tiro final.
+<p>Ataques Fase 4:<br>
+-Padrão 1: Ataques em colunas (1-2 ou 2-3) que empurram jogador.<br>
+-Padrão 2: Projéteis em linhas + tiro final.</p>
 
-->Quadrado Codinome: Nº4(3 unidades)
-Vida individual: 600 cada (1800 total)
+<p>-&gt;Quadrado Codinome: Nº4(3 unidades)<br>
+Vida individual: 600 cada (1800 total)</p>
 
-Comportamento: 
-Movem ,atacam e se defendem sincronizados.
+<p>Comportamento:<br>
+Movem ,atacam e se defendem sincronizados.</p>
 
-Ataque: 
--Escolhem áreas diferentes do grid do jogador e atacam simultaneamente após preparação.
--Após atacarem ficam imune a danos por 4s.
+<p>Ataque:<br>
+-Escolhem áreas diferentes do grid do jogador e atacam simultaneamente após preparação.<br>
+-Após atacarem ficam imune a danos por 4s.</p>
 
-->Triângulo Codinome: Valete
-Vida: 500
+<p>-&gt;Triângulo Codinome: Valete<br>
+Vida: 500</p>
 
-Comportamento: Ataca o Jogador e transforma áreas do jogador em áreas inimigas
+<p>Comportamento: Ataca o Jogador e transforma áreas do jogador em áreas inimigas</p>
 
-Ataques:
--Move-se na coluna 5 atrás do jogador e transforma as colunas 1 e 3 em áreas inimigas, causando caso o jogador pise nelas
--Quando jogador na coluna 2, persegue por 3s
--Dispara projétil que empurra jogador para coluna 1
+<p>Ataques:<br>
+-Move-se na coluna 5 atrás do jogador e transforma as colunas 1 e 3 em áreas inimigas, causando caso o jogador pise nelas<br>
+-Quando jogador na coluna 2, persegue por 3s<br>
+-Dispara projétil que empurra jogador para coluna 1</p>
 
-**Cartas**
+<p><strong>Cartas</strong></p>
 
-ID	Custo	Cópias	Efeito
-A	   0		 1	 	 	Copia a próxima carta da fila
-2		 1		 3	 	 	Ataque em coluna (2 casas à frente)
-3		 1		 3	 	 	Tiro especial que percorre a linha
-4		 2		 2	 	 	Imunidade por 5 segundos
-5		 3		 1	 	 	Cura 50% da vida máxima
-6		 2		 2	 	 	Empurra inimigos das colunas 4-5 para direita
-7		 1		 1	 	 	Efeito aleatório (1-7) - 7 completa barra
-8		 1		 1	 	 	Projéteis que puxam inimigos para sua linha
-9		 2		 1	 	 	Puxa inimigos das colunas 5-6 para esquerda
-10	 5		 1	 	 	Causa mais conforme o número de cartas únicas usadas
+<p>ID	Custo	Cópias	Efeito<br>
+A	   0		 1	 	 	Copia a próxima carta da fila<br>
+2		 1		 3	 	 	Ataque em coluna (2 casas à frente)<br>
+3		 1		 3	 	 	Tiro especial que percorre a linha<br>
+4		 2		 2	 	 	Imunidade por 5 segundos<br>
+5		 3		 1	 	 	Cura 50% da vida máxima<br>
+6		 2		 2	 	 	Empurra inimigos das colunas 4-5 para direita<br>
+7		 1		 1	 	 	Efeito aleatório (1-7) - 7 completa barra<br>
+8		 1		 1	 	 	Projéteis que puxam inimigos para sua linha<br>
+9		 2		 1	 	 	Puxa inimigos das colunas 5-6 para esquerda<br>
+10	 5		 1	 	 	Causa mais conforme o número de cartas únicas usadas</p>
 
-**HUD Principal0**
+<p><strong>HUD Principal</strong></p>
 
--Vida do jogador: Número roxo no canto superior esquerdo
--Vida dos inimigos: Números laranja acima de cada inimigo
--Barra de customização: Progresso para entrar em preparação (verde quando cheia)
--Fila de cartas: Retângulo à direita mostrando cartas selecionadas
--Deck: Indicador com número de cartas restantes
+<p>-Vida do jogador: Número roxo no canto superior esquerdo<br>
+-Vida dos inimigos: Números laranja acima de cada inimigo<br>
+-Barra de customização: Progresso para entrar em preparação (verde quando cheia)<br>
+-Fila de cartas: Retângulo à direita mostrando cartas selecionadas<br>
+-Deck: Indicador com número de cartas restantes</p>
 
-**Estilo Visual**
-Segue as cores o padrão de cores baseado no arquivo Paleta, por constraste e não afetar jogadores com problemas de daltonismo.
+<p><strong>Estilo Visual</strong><br>
+Segue as cores o padrão de cores baseado no arquivo Paleta, por constraste e não afetar jogadores com problemas de daltonismo.</p>
 
--Cores principais: Roxo (jogador), Laranja (inimigos), Ciano (efeitos/menu)
--Grid: 3 linhas × 6 colunas (3 colunas jogador, 3 colunas inimigo)
--Fundo: Padrão abstrato com linhas diagonais em movimento
--Efeitos: Partículas, transparências, pulsação e piscadas para indicar ataques
+<p>-Cores principais: Roxo (jogador), Laranja (inimigos), Ciano (efeitos/menu)<br>
+-Grid: 3 linhas × 6 colunas (3 colunas jogador, 3 colunas inimigo)<br>
+-Fundo: Padrão abstrato com linhas diagonais em movimento<br>
+-Efeitos: Partículas, transparências, pulsação e piscadas para indicar ataques</p>
 
-**Créditos**
+<p><strong>Créditos</strong></p>
 
--Programação e direção: Matheus Santos da Costa Alves
--Músicas: Juhani Junkala (via subspaceaudio.itch.io)
--Produto sem fins comerciais
+<p>-Programação e direção: Matheus Santos da Costa Alves<br>
+-Músicas: Juhani Junkala (via subspaceaudio.itch.io)<br>
+-Produto sem fins comerciais</p>
 
-**Versão**
-v1.0
+<p><strong>Versão</strong><br>
+v1.0</p>
