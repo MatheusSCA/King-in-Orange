@@ -109,7 +109,7 @@ Segue as cores o padrão de cores baseado no arquivo Paleta, por constraste e n�
 <p><strong>Créditos</strong></p>
 
 <p>-Programação e direção: Matheus Santos da Costa Alves<br>
--Músicas: Juhani Junkala (via subspaceaudio.itch.io)<br>
+-Músicas: subspaceaudio.itch.io](https://subspaceaudio.itch.io/indie-game-music-loops<br>
 -Produto sem fins comerciais</p>
 
 <p><strong>Versão</strong><br>
