@@ -1,4 +1,5 @@
-#King in Yellow# 
+<font size="7" color="#800080">KING IN YELLOW</font>
+
 Jogo feito em Lua e rodando no Love2D 
 
 King in Orange é um jogo RPG de estratégia em turnos com combate em tempo real, onde o jogador controla uma esfera roxa em um grid 3x6, enfrentando diferentes inimigos em 4 fases distintas. O jogo combina elementos de card game e bullet hell em um estilo visual retrô com cores vibrantes.
